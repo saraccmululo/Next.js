@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import logoImg from "@/assets/logo.png";
-const mainHeader = () => {
+const MainHeader = () => {
   return (
     <header>
       <Link href="/">
@@ -18,4 +18,4 @@ const mainHeader = () => {
   );
 };
 
-export default mainHeader;
+export default MainHeader;
