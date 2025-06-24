@@ -2,7 +2,7 @@ import React from 'react'
 
 const CommunityPage = () => {
   return (
-    <div>CommunityPage</div>
+    <h1>Community</h1>
   )
 }
 
