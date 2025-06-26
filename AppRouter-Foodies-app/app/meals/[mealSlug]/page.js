@@ -2,6 +2,18 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import { getMeal } from '@/lib/meals'
 import { notFound } from 'next/navigation';
+import NotFound from '../not-found';
+
+export async function generateMetadata({params}){
+  const meal=getMeal(params.mealSlug);
+  if(!meal) {
+    NotFound();
+  }
+  return {
+    title: meal.title,
+    description: meal.summary
+  }
+}
 
 const MealDetailPage = ({params}) => {
   const meal=getMeal(params.mealSlug);
